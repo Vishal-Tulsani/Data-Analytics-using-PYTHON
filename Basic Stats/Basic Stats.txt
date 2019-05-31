@@ -1,0 +1,69 @@
+Mandatory Assignment of Basic Stats
+
+
+
+Objective - In this project we are going to work with the Times Series and will create the Stationary Time Series Model which can be utilised further for creating Predictive Models and Future Analysis
+
+
+Dataset - We are going to use dataset related to daily total births in a country. The Data is available for one complete year.
+
+
+Task 1
+
+a) Import all the required modules. (MM - 1)
+
+b) Read the file and store the data in a pandas dataframe called birth_data. Headers given at Row 0, should be the column names. ead the complete Data in different columns. (MM - 1)
+
+
+Task 2
+
+a) Check the Data types and values. Verify the lower 2 rows of the Dataframe. What did you find?Remove the last 2 rows of the birth_data Dataframe. (MM - 3)
+
+Hint - You can use skipfooter variable in read_csv method to avoid reading the last 2 rows from the file or else use method on Dataframe to delete las two rows.
+
+b) Find out the number of observations in the birth_data dataframe and no. of columns. (MM – 5)
+
+
+Task 3
+
+a) Set Date column as the index for the birth_data dataframe and also modify birth_data to have only one column named "DailyCount". (MM - 3)
+
+b) Find out the number of observations in the birth_data dataframe and no. of columns. (MM - 2)
+
+
+Task 4
+
+a) Check the basic Statistics of the birth_data dataframe and describe it in your words. (MM - 5)
+
+b) Plot the birth_data and check if is it Stationary or has some trend /pattern /seasonality /cyclic effect. Describe your answer. (MM - 10)
+
+
+Task 5
+
+a) Calculate the dynamic_mean and dynamic standard deviation of the birth_data for the window size of 12. (MM - 5)
+
+b) Plot the original data along with dynamic_mean and dynamic standard deviation and describe the plot in your words. Is the series stationary? (MM - 10)
+
+
+Task 6
+
+Make the series Stationary and use the relevant model for the Time Series. Store your fitted model variable named as ts_model. Give reasons for choosing your option. (MM - 25)
+
+Hint- Different Models for Time Series are AR, MA, ARMA and ARIMA
+
+Hint- Use AutoCorrelation Function and Partial AutoCorrelation Function plots to choose your Model
+
+
+Task 7
+
+a) Print the Summary/Result of your fitted Model called ts_model. (MM - 5)
+
+b) Plot the fitted values of the ts_model along with the Time-series used for creating Model. Describe the plot in your words. (MM - 10)
+
+
+Task 8
+
+a) Store the residual component of the model in a variable called model_residual. (MM - 5)
+
+b) Calculate the dynamic_mean and dynamic standard deviation of the model_residual for the window size of 12. Plot the model's residual data along with it's dynamic_mean and dynamic standard deviation and describe the plot in your words. (MM - 10)
+

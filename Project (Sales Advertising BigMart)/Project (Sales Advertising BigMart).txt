@@ -1,0 +1,150 @@
+Project (Sales Advertising BigMart)
+
+
+
+Mr Roy has joined BigMart few months ago, as a Sr. Sales Manager. BigMart is doing good in the market and with the stable performance over the years, management is now looking big numbers in terms of Sales. As the festive season is approaching they are targeting a big jump in sales this year.
+
+
+Mr. Roy knows these is achievable and for this he need something which can ensure him before he take any step, may be some data can help. He is more concerned as increasing Sales has impact on other departments e.g. BigMart need to twist its the marketing budget.
+
+
+He is aware that BigMart maintains data in its Database system. This data can be very helpful to get the insights and do predictive analysis. Last month, he has hired a Data Scientist to assist him to achieve his target. So based on numbers and analysis he can convince management and the Marketing Manager to make changes in the budget. Now as a Data Analyst it is your job to analyse the data and help Mr Roy to set the Sales Target for the future.
+
+
+Note - For working on this Project, we recommend the use of Python 3.x version with libraries such as NumPy, Pandas, MatPlotLib, Seaborn, SkLearn, Scipy, statsmodels), Jupyter Notebook, MySQL. Also, the knowledge of Supervised Learning: Regression is required.
+
+
+The Data given here is on monthly basis with the following columns -
+
+
+tv- spending on TV advertisement in Thousand Rupees
+
+Radio - spending on Radio advertisement in Thousand Rupees
+
+newspaper - spending on NewsPaper advertisement in Thousand Rupees
+
+Sales - Sales of the product in Lac Rupees
+
+
+Your task is to create a Predictive Model using Linear Regression Technique
+
+
+Note – It is very essential to keep in mind the units of different columns, while making our analysis. They have to be in sync with each other. 
+
+
+Data file - SalesBasedOnAdvertising.csv
+
+
+Task 1 – a) Import the required libraries. Store the data into pandas dataframe and call it df_marketing.
+
+
+b) Analyze the shape of the Data using df_makreby checking the no. of rows and columns available
+
+
+c) Check the basic statistics of the given parameters and also look into the type of the data. Describe the Dataset in your words including the columns, their type, ranges and other stats.
+
+
+d) Next check if there is any Null/character type data in the given data.
+
+If any Sales data is Null or contain value 0, drop the complete row.
+
+
+For any other column, fill those cell with the average value for those columns.
+
+
+For example, if there are 150 Non-null values, find the average of those 150 value and fill all the blank/Null/string type data with this average value.
+
+
+e) Once again perform the Task b) and c) to check the shape and statistics of the data. Explain the changes.
+
+
+Task 2 – a) Create the Box-plot of all the numeric columns and explain the result in your words.
+
+
+b) Next you need to create a figure and create two subplots(contained in the same row) on it with the following details -
+
+
+    First subplot will show the Box plot of Sales, tv, radio and newpapers columns
+
+
+    Create Line plot of all the 4 columns Sales, tv, radio and newpapers using panadas.dataframe.data.plot method, on the Second subplot. Use different colours for different columns.
+    Both the subplots should have the appropriate labels for X and Y values and title
+
+
+Task 3 – a) In order to predict the Sales based on Marketing expenses, find out the possible independent and dependent variables from the given Dataset. You can suggest different models (max. Up to 3) and explain any one of your model.
+
+
+b) Now, you would have already figured out that Sales is your dependent variable for which you are going to create your model. Lets Create the distribution plot along with kde plot for the Sales data and explain it in your words.
+
+
+Task 4 – Next task is to see the distribution of different parameters along with Sales. For this we will use Scatter Plot.
+
+
+a) Create the Scatter plot using the dataframe plot function keeping the Sales on Y-axis and expenditure on tv on x-axis.
+
+b) Create 3 subplots (in a single row) in a figure for the following -
+
+
+Sales vs TV Advertising
+
+Sales vs Radio Advertising
+
+Sales vs NewsPaper Advertising
+
+
+the points should be of seagreen, darkgreen and black colours respectively
+
+Provide the appropriate labels for x and y axis and name of the graphs.
+
+
+c) Create the pairplot for Sales with different marketing expenses using seaborn.
+
+
+Task 5 – a) Add a new column “TotalAdvt” to the dataframe df_marketing, which will have the total of all the three marketing expenditures (tv, radio and news-paper)
+
+
+b) Fit a Simple Linear Regression for Sales and TotalAdvt and find out the values of intercept slope and the R-square value. Describe the model in your terms. The model should be named simple_model.
+
+
+c) What will be the Sales using the above Model if total expenditure on advertisements is Rupees 50,000. Show the steps done to find out the Sales value. (write the mathematical equation used )
+
+
+d) Perform part c) using the predict method for the model created in part b)
+
+
+Task 6 – In this section, we will create a different model to see the impact of different marketing expenditures on Sales. For this we will use advertising on tv, radio and news-paper as separate variables or independent variables.
+
+
+a) Fit a Simple Linear Regression for Sales while keeping tv, radio and newspaper as three different x-parameters. The model should be named multi_model.
+
+
+Find out the values of intercept slopes and the R-square value. Describe the model in your terms.
+
+
+b) Write the Mathematical equation for Sales for this Model. Predict Sales for the below mentioned Expenditures
+
+i) tv 90000, radio 3000 and newspaper 45000
+
+ii) tv 290000 and newspaper 80000
+
+
+Explain your answers in words
+
+
+c) Perform part b) using the predict method for the model.
+
+
+d) Compare the result in part b) and c)
+
+
+Task 7 – As part of task 5) and 6) we created two different models. Compare the two models (simple_model and multi_model) by calculating the Error in the Models. Explain which model is better and why?
+
+
+a) For both the simple regression model (stored in simple_model) and Multi-variate model (stored in multi_model) find out the predicted value of Y, for the given X-values and store it in simple_y and multi_y.
+
+
+b) Find out the Mean Squared Error, using the metrics module of sklearn, for both the models (using actual and predicted values of Sales). Store the result in simple_mse and multi_mse respectively.
+
+
+c) Explain the result in step b) in your words describing which model is better and why?
+
